@@ -6,7 +6,7 @@ project 1 - A Random Quote Generator
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
-
+//Tested on console, works fine
 var quotes = [
   {
    quote : "Knowing what's right doesn't mean much unless you do what's right." , 
@@ -37,7 +37,7 @@ var quotes = [
   }
 ];
 
-
+//Tested on console, works fine.
 function getRandomQuote () {
     randomNum = Math.floor(Math.random() * quotes.length) + 1;
     var i = randomNum;
@@ -73,7 +73,7 @@ function printQuote () {
   return randomQuote;
 }
 
-console.log(printQuote());
+console.log(printQuote()); //Error encountered up to this point
 
 
 /***
