@@ -29,7 +29,7 @@ var quotes = [
   {
     quote : "It matters not what someone is born, but what they grow to be" , 
     source : "J. K. Rowling" ,
-    citaton : "Harry Potter and the Goblet of Fire" , //<---- Not showing on page
+    citation : "Harry Potter and the Goblet of Fire" ,
     tag : "Authors"
   },
   {
@@ -47,11 +47,11 @@ function getRandomQuote () {
     return quotes[i];
 }
 
-
 //printQuote function: takes randomly chosen quote object and writes and formats it to HTML doc.
 function printQuote () {
   var randomQuote = getRandomQuote();
   var html = '';
+  const body = document.body;
   html += '<p class="quote">' + randomQuote.quote + '</p>';
   html += '<p class="source">' + randomQuote.source;
   if ( randomQuote.citation ) {
@@ -65,14 +65,11 @@ function printQuote () {
   };
   html += '</p>';
   document.getElementById('quote-box').innerHTML = html;
+  body.style.backgroundColor = randomColor();
 }
-
-
 
 //Displays new quote when "Show another quote" button is clicked
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
 
 // Function that randomly generates an rgb color.
 function randomColor () {
@@ -82,15 +79,6 @@ function randomColor () {
   var bgColor = "rgb(" + x + "," + y + "," + z + ")";
   return bgColor;
 }
-
-
-// Randomly changes background color when "Show another quote" button is clicked
-const body = document.body;
-const quoteButton = document.getElementById ('loadQuote');
-quoteButton.addEventListener ('click', () => {
-  body.style.backgroundColor = randomColor();
-});
-
 
 // Sets a timer that changes the quote on the page every 20 seconds
 setInterval (printQuote , 20000);
