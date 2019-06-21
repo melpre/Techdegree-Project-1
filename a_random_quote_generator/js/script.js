@@ -1,6 +1,8 @@
 /******************************************
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
+by Melissa Preece
+I am aiming for the grade Exceeds Expectations but will accept Meets Expectations as well.
 ******************************************/
 
 //Array of 6 quote objects, some including year and citation information.
