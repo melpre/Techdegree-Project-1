@@ -44,8 +44,8 @@ var quotes = [
 
 //getRandomQuote function: returns one quote object randomly.
 function getRandomQuote () {
-    randomNum = Math.floor(Math.random() * quotes.length);
-    var i = randomNum;
+    let randomNum = Math.floor(Math.random() * quotes.length);
+    let i = randomNum;
     return quotes[i];
 }
 
